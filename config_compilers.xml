@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<compiler COMPILER="intel" MACH="oscar">
+  <CFLAGS>
+    <base>  -qno-opt-dynamic-align -fp-model precise -std=gnu99 </base>
+    <append compile_threaded="true"> -qopenmp </append>
+    <append DEBUG="FALSE"> -O2 -debug minimal </append>
+    <append DEBUG="TRUE"> -O0 -g </append>
+  </CFLAGS>
+  <CPPDEFS>
+    <!-- http://software.intel.com/en-us/articles/intel-composer-xe/ -->
+    <append> -DFORTRANUNDERSCORE -DCPRINTEL</append>
+  </CPPDEFS>
+  <CXX_LDFLAGS>
+    <base> -cxxlib </base>
+  </CXX_LDFLAGS>
+  <CXX_LINKER>FORTRAN</CXX_LINKER>
+  <FC_AUTO_R8>
+    <base> -r8 </base>
+  </FC_AUTO_R8>
+  <FFLAGS>
+    <base> -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source  </base>
+    <append compile_threaded="true"> -qopenmp </append>
+    <append DEBUG="TRUE"> -O0 -g -check uninit -check bounds -check pointers -fpe0 -check noarg_temp_created </append>
+    <append DEBUG="FALSE"> -O2 -debug minimal </append>
+  </FFLAGS>
+  <FFLAGS_NOOPT>
+    <base> -O0 </base>
+    <append compile_threaded="true"> -qopenmp </append>
+  </FFLAGS_NOOPT>
+  <FIXEDFLAGS>
+    <base> -fixed -132 </base>
+  </FIXEDFLAGS>
+  <FREEFLAGS>
+    <base> -free </base>
+  </FREEFLAGS>
+  <LDFLAGS>
+    <append compile_threaded="true"> -qopenmp </append>
+  </LDFLAGS>
+  <MPICC> mpicc  </MPICC>
+  <MPICXX> mpicxx </MPICXX>
+  <MPIFC> mpif90 </MPIFC>
+  <SCC> icc </SCC>
+  <SCXX> icpc </SCXX>
+  <SFC> ifort </SFC>
+  <SLIBS>
+    <append MPILIB="mpich"> -mkl=cluster </append>
+    <append MPILIB="mpich2"> -mkl=cluster </append>
+    <append MPILIB="mvapich"> -mkl=cluster </append>
+    <append MPILIB="mvapich2"> -mkl </append>
+    <append MPILIB="mpt"> -mkl=cluster </append>
+    <append MPILIB="openmpi"> -mkl=cluster </append>
+    <append MPILIB="impi"> -mkl=cluster </append>
+    <append MPILIB="mpi-serial"> -mkl </append>
+    <append> -L$(NETCDF)/lib -lnetcdff -lnetcdf -lnetcdf -llapack -lblas </append>
+  </SLIBS>
+  <SUPPORTS_CXX>TRUE</SUPPORTS_CXX>
+</compiler>
+
