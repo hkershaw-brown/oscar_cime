@@ -20,6 +20,7 @@
     <mpirun mpilib="default">
       <executable>srun</executable>
       <arguments>
+        <arg name="pmi">--mpi=pmi2</arg>
         <arg name="num_tasks"> -n {{ total_tasks }}</arg>
         <arg name="thread_count"> -d $ENV{OMP_NUM_THREADS}</arg>
       </arguments>
