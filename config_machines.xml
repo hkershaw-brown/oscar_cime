@@ -7,9 +7,9 @@
     <COMPILERS>intel</COMPILERS>
     <MPILIBS>mvapich2</MPILIBS>
     <CIME_OUTPUT_ROOT>/gpfs/scratch/$USER</CIME_OUTPUT_ROOT>
-    <DIN_LOC_ROOT>/users/hkershaw/scratch/din_loc_root</DIN_LOC_ROOT>
-    <DIN_LOC_ROOT_CLMFORC>/users/hkershaw/scratch/din_loc_root/cesm_inputdata/atm/datm7</DIN_LOC_ROOT_CLMFORC>
-    <DOUT_S_ROOT>/gpfs/scratch/$USER/archive/$CASE</DOUT_S_ROOT>
+    <DIN_LOC_ROOT>/gpfs/data/shared/cesm/input_data</DIN_LOC_ROOT>
+    <DIN_LOC_ROOT_CLMFORC>/gpfs/data/shared/cesm/input_data/atm/datm7</DIN_LOC_ROOT_CLMFORC>
+    <DOUT_S_ROOT>/gpfs/home/$USER/data/$USER/archive/$CASE</DOUT_S_ROOT>
     <BASELINE_ROOT>/gpfs/scratch/$USER/ccsm_baselines</BASELINE_ROOT>
     <CCSM_CPRNC>/gpfs/scratch/$USER/cesm_tools/ccsm_cprnc/cprnc</CCSM_CPRNC>
     <GMAKE_J>4</GMAKE_J>
