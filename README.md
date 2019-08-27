@@ -8,5 +8,6 @@ version of CESM2 on Oscar.
   - config_compilers.xml
   - config_machines.xml
 
-
+To use this repository to create your own ~/.cime directory
+git clone https://github.com/hkershaw-brown/oscar_cime .cime
 
