@@ -3,7 +3,7 @@
 <compiler COMPILER="intel" MACH="oscar">
   <CFLAGS>
     <base>  -qno-opt-dynamic-align -fp-model precise -std=gnu99 </base>
-    <append compile_threaded="true"> -qopenmp </append>
+    <append compile_threaded="TRUE"> -qopenmp </append>
     <append DEBUG="FALSE"> -O2 -debug minimal </append>
     <append DEBUG="TRUE"> -O0 -g </append>
   </CFLAGS>
@@ -20,13 +20,13 @@
   </FC_AUTO_R8>
   <FFLAGS>
     <base> -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source  </base>
-    <append compile_threaded="true"> -qopenmp </append>
+    <append compile_threaded="TRUE"> -qopenmp </append>
     <append DEBUG="TRUE"> -O0 -g -check uninit -check bounds -check pointers -fpe0 -check noarg_temp_created </append>
     <append DEBUG="FALSE"> -O2 -debug minimal </append>
   </FFLAGS>
   <FFLAGS_NOOPT>
     <base> -O0 </base>
-    <append compile_threaded="true"> -qopenmp </append>
+    <append compile_threaded="TRUE"> -qopenmp </append>
   </FFLAGS_NOOPT>
   <FIXEDFLAGS>
     <base> -fixed -132 </base>
@@ -35,7 +35,7 @@
     <base> -free </base>
   </FREEFLAGS>
   <LDFLAGS>
-    <append compile_threaded="true"> -qopenmp </append>
+    <append compile_threaded="TRUE"> -qopenmp </append>
   </LDFLAGS>
   <MPICC> mpicc  </MPICC>
   <MPICXX> mpicxx </MPICXX>
