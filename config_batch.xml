@@ -22,7 +22,8 @@
       <directive> --nodes={{ num_nodes }}</directive>
       <directive> --ntasks-per-node={{ tasks_per_node }}</directive>
       <directive> --output={{ job_id }}   </directive>
-      <directive> --exclusive                        </directive>
+      <directive> --exclusive             </directive>
+      <directive> --mem=0                 </directive>     
     </directives>
     <queues>
       <queue default="true">batch</queue>
