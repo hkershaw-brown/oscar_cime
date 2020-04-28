@@ -53,7 +53,6 @@
     <append MPILIB="impi"> -mkl=cluster </append>
     <append MPILIB="mpi-serial"> -mkl </append>
     <append> -L$(NETCDF)/lib -lnetcdff -lnetcdf -lnetcdf -llapack -lblas </append>
-    <append> -L/gpfs/runtime/opt/esmf/8.0.0b/lib/libO/Linux.intel.64.mvapich2.default -lesmf </append>
     <append> -L/gpfs/runtime/opt/yaml-cpp/0.6.2_intel2019.3/lib -lyaml-cpp </append>
   </SLIBS>
   <SUPPORTS_CXX>TRUE</SUPPORTS_CXX>
